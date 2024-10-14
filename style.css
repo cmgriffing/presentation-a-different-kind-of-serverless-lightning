@@ -1,0 +1,13 @@
+.slidev-layout.cover h1, .slidev-layout.intro h1, .slidev-layout.cover h1 {
+  font-size: 3.75rem !important;
+  line-height: 1 !important;
+  line-height: 5rem !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gochi Hand";
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
