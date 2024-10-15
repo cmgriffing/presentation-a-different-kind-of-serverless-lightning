@@ -19,59 +19,41 @@ layout: intro
 - 2017: NaCL deprecated in favor of WASM
 - 2017: Broad browser support
 - 2019: WebAssembly System Interface (WASI) announced
+- 2019: WASM Threads enabled by default in Chrome
+- 2022: WASM 2.0 draft
 
 ---
+layout: image-right
 transition: fade-out
-layout: intro
+image: /images/wasi.png
 ---
 
-## asm.js
+## WASI
 
-- a precursor to WASM
-- a strict subset of JavaScript
+<div class="mt-24">
+
+WebAssembly System Interface
+
+- Designed by Mozilla
+- Provides POSIX-like features
+  - Such as file I/O
+
+</div>
 
 ---
+layout: image-left
 transition: fade-out
+image: /images/solomon-hykes.jpg
 ---
 
-## asm.js: Example
+## WASM + WASI
 
-```js
-function asmModule(stdlib, foreign, heap) {
-  "use asm";
+> If WASM+WASI existed in 2008, we wouldn't have needed to create Docker. That's how important it is. WebAssembly on the server is the future of computing.
 
-  // shared variables
-  var sin = stdlib.Math.sin;
-  var heap32 = new stdlib.Float32Array(heap);
-  var size = 0;
-
-  // function declarations
-  function complexCalculation(size, factor) {
-    size = size|0;
-    factor = +factor
-    ...
-  }
-
-  // export function
-  return { complexCalculation: complexCalculation }
-}
-```
-
-<!--
-- "use asm"
-- size|0 - int - 32-bit integer
-- +factor - double - 64 bit floating point type
-
-Syntax not allowed
-- for-in (Objects and strings are not allowed)
-- try-catch-finally
-- Change the scope with {}
-- Any ES6 syntax
--->
-
+\- Solomon Hykes (2019), Creator of Docker
 
 ---
-transition: slide-left
+## transition: slide-left
 ---
 
 ## The Birth and Death of JavaScript (2014)

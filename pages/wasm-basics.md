@@ -10,7 +10,7 @@ transition: fade-out
 layout: intro
 ---
 
-# What is WASM?
+## What is WASM?
 
 - WebAssembly
 - an open standard
@@ -62,7 +62,7 @@ layout: center
 
 ## The first couple lines
 
-```
+```asm
 ; Wasm magic number (\0asm)
 0000000: 0061 736d
 
@@ -77,7 +77,7 @@ layout: center
 
 ## WASM Modules
 
-```
+```asm
 ; section "type" (ID 1)
 0000008: 01
 
@@ -96,7 +96,7 @@ layout: center
 
 ## Types
 
-```
+```asm
 ; number of types (1)
 0000000a: 01
 
@@ -124,7 +124,7 @@ layout: center
 
 ## The function signature
 
-```
+```asm
 ; section "function" (ID 3)
 0000000f: 03
 
@@ -149,7 +149,7 @@ layout: center
 
 ## The export section
 
-```
+```asm
 ; section "export" (ID 7)
 0000013: 07
 
@@ -158,7 +158,19 @@ layout: center
 
 ; number of exports (1)
 0000015: 01
+```
 
+<!--
+Next, the export section (ID 7) follows. The section defines the export name with the index to our function
+-->
+---
+transition: fade-out
+layout: center
+---
+
+## The export section (continued)
+
+```asm
 ; length of the export name (4 bytes)
 0000016: 04
 
@@ -183,7 +195,7 @@ layout: center
 
 ## The function section
 
-```
+```asm
 ; section "code" (ID 10)
 000001d: 0a
 
@@ -211,7 +223,7 @@ layout: center
 
 ## The logic section
 
-```
+```asm
 ; instruction i32.const
 0000022: 41
 
@@ -233,7 +245,7 @@ layout: center
 
 ## The end
 
-```
+```asm
 ; end of the function code
 0000025: 0b
 ```
@@ -241,37 +253,6 @@ layout: center
 <!--
 The very last byte is simply the end of the function code
 -->
-
----
-transition: fade-out
-layout: center
----
-
-## Pseudocode
-
-The whole program as pseudocode would read as follows
-
-```
-Wasm magic number
-version
-
-section "type"
-  func
-  result type: i32
-
-section "function"
-  index of the function: 0
-
-section "export"
-  export name: "main"
-  export kind: function
-  index of the function: 0
-
-section "code"
-  i32.const
-  i32 literal: 42
-  return
-```
 
 ---
 transition: slide-left

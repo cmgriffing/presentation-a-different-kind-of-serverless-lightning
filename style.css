@@ -1,13 +1,78 @@
-.slidev-layout.cover h1, .slidev-layout.intro h1, .slidev-layout.cover h1 {
-  font-size: 3.75rem !important;
-  line-height: 1 !important;
-  line-height: 5rem !important;
+:root {
+  --slidev-theme-primary: #c9e6f3;
+  --prism-font-size: 2em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.shiki.slidev-code {
+  font-size: 1.5rem !important;
+  line-height: 1.8rem !important;
+}
+
+.slidev-layout.cover h1,
+.slidev-layout.intro h1,
+.slidev-layout.cover h1 {
+  font-size: 3.75rem !important;
+  line-height: 1 !important;
+  line-height: 3.5rem !important;
+}
+
+.slidev-layout.cover h1+p,
+.slidev-layout.intro h1+p {
+  opacity: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Gochi Hand";
 }
 
+.dark h1,
+.dark h2 {
+  color: black !important;
+}
+
 h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem !important;
+}
+
+h1:before,
+h2::before {
+  height: 1.5em;
+  top: -0.4em;
+}
+
+img {
+  max-height: 50vh;
+  width: auto;
+  margin: 2rem auto;
+}
+
+.slidev-code-wrapper {
+  padding: 0.5rem;
+}
+
+.slidev-layout {
+  font-size: 1.5rem;
+}
+
+.slidev-layout h1+p {
+  opacity: 1;
+}
+
+.slidev-layout blockquote {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.grid-cols-2 :nth-child(2) {
+  border-radius: 1rem;
+}
+
+.col-header {
   margin-bottom: 1rem;
 }

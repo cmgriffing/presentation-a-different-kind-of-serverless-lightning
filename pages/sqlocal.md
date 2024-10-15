@@ -7,7 +7,7 @@ layout: intro
 
 ---
 transition: fade-out
-layout: intro
+layout: two-cols
 ---
 
 ## SQLocal: Basics
@@ -19,6 +19,10 @@ https://sqlocal.dallashoffman.com/
   - won't block the main thread
 - Persisted via OPFS
   - faster than indexedDB
+
+::right::
+
+<img src="/images/sqlocal.png" class="w-full h-auto m-0 mt-32">
 
 
 ---
@@ -41,10 +45,12 @@ layout: intro
 
 ---
 transition: fade-out
-layout: intro
+layout: two-cols-header
 ---
 
 ## ORMs
+
+::left::
 
 - Kysely for migrations
   - Used for: creating tables and indexes, and initial db seeding
@@ -52,12 +58,18 @@ layout: intro
   - Made by creator of objection.js
   - "No magic, just SQL"
   - No relations
+
+::right::
+
 - Drizzle for queries
   - Full ORM
   - Migrations-run via CLI tool instead of in the browser
   - Type-safe
   - Relation-capable
 
+::bottom::
+
+<div class="h-8 mt-8 mb-8"></div>
 
 ---
 transition: slide-left

@@ -25,10 +25,6 @@ fonts:
   serif: Gochi Hand
 ---
 
-# A Different Kind of Serverless
-
-A Case Study for SQLite and Whisper.cpp running purely in the browser
-
 ---
 src: ./pages/intro.md
 ---
